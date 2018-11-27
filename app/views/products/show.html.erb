@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<h2>Orders for </h2>
+<hr>
+ <div class="col-md-3"
+<p>
+  <strong>Code:</strong>
+  <%= @product.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @product.quantity %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @product.status %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @product.total %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @product.paid %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @product.balance %>
+</p>
+
+
+<%= link_to 'Back', products_path %>
+</div>
