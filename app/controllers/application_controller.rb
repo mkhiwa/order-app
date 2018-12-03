@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
     thankyou_path
   end
 
+  def after_sign_out_path_for(resource)
+    thankyou_path
+  end
+
 end

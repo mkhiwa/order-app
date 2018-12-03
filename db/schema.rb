@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_202507) do
+ActiveRecord::Schema.define(version: 2018_11_27_193437) do
 
   create_table "products", force: :cascade do |t|
     t.string "code"
     t.string "description"
     t.string "status"
     t.decimal "price", precision: 10, scale: 2
-    t.decimal "total", precision: 10, scale: 2
-    t.decimal "paid", precision: 10, scale: 2
-    t.decimal "balance", precision: 10, scale: 2
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity"
+    t.decimal "paid", precision: 10, scale: 2, default: "0.0", null: false
+    t.decimal "balance", default: "0.0", null: false
+    t.decimal "total", default: "0.0", null: false
   end
 
   create_table "users", force: :cascade do |t|

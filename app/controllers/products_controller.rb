@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
  before_action :authenticate_user!
+  http_basic_authenticate_with name: 'neyda', 
+  password: 'ricardo', 
+  except: [:show,:index,:new,:create]
  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -7,11 +10,11 @@ class ProductsController < ApplicationController
   # GET /items.json
   def index
     @products = Product.where(user: current_user) 
+    
   end
 
- def total
- @product.total = Product.quantity * Product.price
- end
+
+
   # GET /items/1
   # GET /items/1.json
   def show

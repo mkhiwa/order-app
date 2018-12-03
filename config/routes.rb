@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       root to: "users#index"
     end
    
-   get 'thankyou', to: 'thank_you#index'
+   get 'thankyou', to: 'products#index'
   root to: 'visitors#index'
    resources :products
   devise_for :users

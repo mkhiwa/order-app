@@ -28,7 +28,7 @@
   </div>
   <div class="field">
     <%= form.label :status %>
-    <%= form.text_field :status %>
+    <%= form.select(:status, options_for_select([['PENDING','PENDING'],['DELIVERED','DELIVERED'],['PAID','PAID']])) %>
   </div>
 
   <div class="field">
@@ -37,21 +37,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :total %>
-    <%= form.text_field :total %>
+  
+    <%= form.hidden_field :total %>
   </div>
 
   <div class="field">
-    <%= form.label :paid %>
-    <%= form.text_field :paid %>
+   
+    <%= form.hidden_field :paid %>
   </div>
 
   <div class="field">
-    <%= form.label :balance %>
-    <%= form.text_field :balance %>
+  
+    <%= form.hidden_field :balance %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+

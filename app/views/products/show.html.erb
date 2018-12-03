@@ -1,51 +1,49 @@
-<p id="notice"><%= notice %></p>
+<main role="main">
 
-
-
-<h2>Orders for </h2>
-<hr>
- <div class="col-md-3"
-<p>
-  <strong>Code:</strong>
-  <%= @product.code %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @product.status %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @product.total %>
-</p>
-
-<p>
-  <strong>Paid:</strong>
-  <%= @product.paid %>
-</p>
-
-<p>
-  <strong>Balance:</strong>
-  <%= @product.balance %>
-</p>
-
-
-<%= link_to 'Back', products_path %>
+<form>
+  <div class="form-row">
+    <div class="form-group">
+    Code:  <%= @product.code %>
 </div>
+
+<div class="form-group">
+  Description:  <%= @product.description %>
+</div>
+
+
+<div class="form-group">
+  Quantity:
+  <%= @product.quantity %>
+</div>
+
+<div class="form-group">
+  Status:
+  <%= @product.status %>
+</div>
+
+<div class="form-group">
+  Price:
+  <%= number_to_currency(@product.price,:unit => "E", :separator => ".", :delimiter => ",") %></font>
+</div>
+
+<div class="form-group">
+  Total: <font color="red"><%= number_to_currency(@product.subtotal,:unit => "E", :separator => ".", :delimiter => ",") %></font>
+</div>
+
+<div class="form-group">
+  Paid: <font color="green"><%= number_to_currency(@product.paid,:unit => "E", :separator => ".", :delimiter => ",") %></font>
+  
+ 
+</div>
+
+<div class="form-group">
+    Balance: <font color="red"><%= number_to_currency(@product.defbalance,:unit => "E", :separator => ".", :delimiter => ",") %></font>
+ 
+  
+</div>
+
+
+<%= link_to 'Back', products_path, class: 'btn-primary btn-sm' %>
+</div>
+</form>
+</main>

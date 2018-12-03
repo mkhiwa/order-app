@@ -1,15 +1,15 @@
 class Product < ApplicationRecord
-	belongs_to :user
+belongs_to :user
+before_save :subtotal
+before_save :defbalance
 
-  validates :price, :presence => true      # Don't forget add DB validations, too :)
-  validates :quantity, :presence => true
+ def subtotal 
+  pricetotal = quantity * price
+  self.total = pricetotal
+ end
 
-def total
-    (price * quantity)
-end
-
-def balance 
- (total - paid)
-end
-	
+ def defbalance 
+  balancesum = (price * quantity) - paid 
+  self.balance = balancesum
+ end	
 end
