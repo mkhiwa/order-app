@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: [:client, :vip, :admin]
+  enum role: [:client, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role
