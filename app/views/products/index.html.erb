@@ -20,10 +20,10 @@
   </thead>
 
   <tbody>
-    <div class='pull-right'><%= link_to 'New Product', new_product_path, class: 'btn btn-success btn-default' %></div>
+    
     <% @products.each do |product| %>
       <tr>
-        <td scope="row"><%= product.created_at %></td>
+        <td scope="row"><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
         <td scope="row"><%= product.user.name %></td>
         <td scope="row"><%= product.code %></td>
         <td scope="row"><%= product.description %></td>
