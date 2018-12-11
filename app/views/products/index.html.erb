@@ -32,7 +32,7 @@
         <td scope="row"><%= number_to_currency(product.price,:unit => "E", :separator => ".", :delimiter => ",") %></td>
         <td scope="row"><font color="red"><%= number_to_currency(product.subtotal,:unit => "E", :separator => ".", :delimiter => ",") %></font></td>
         <td scope="row"><font color="green"><%= number_to_currency(product.paid,:unit => "E", :separator => ".", :delimiter => ",") %></font></td>
-        <td scope="row"><font color="red"><%= number_to_currency(product.defbalance, :unit => "E", :separator => ".", :delimiter => ",") %></font></td>
+        <td scope="row"><font color="red"><strong><%= number_to_currency(product.defbalance, :unit => "E", :separator => ".", :delimiter => ",") %></font></strong></td>
 
         <td><%= link_to 'Show', product, :class => 'btn-success button-xs' %></td>
         
