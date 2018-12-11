@@ -23,7 +23,7 @@
     
     <% @products.each do |product| %>
       <tr>
-        <td scope="row"><%= product.created_at.strftime("%d/%m/%Y %H:%M") %></td>
+        <td scope="row"><%= product.created_at.strftime("%d-%b-%Y") %></td>
         <td scope="row"><%= product.user.name %></td>
         <td scope="row"><%= product.code %></td>
         <td scope="row"><%= product.description %></td>
