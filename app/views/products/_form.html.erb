@@ -12,16 +12,11 @@
   <% end %>
 
  
-
-  <div class="field">
-    <%= form.label :code %>
-    <%= form.text_field :code %>
+ <div class="field">
+    <%= form.label :name %>
+    <%= form.select(:name, options_for_select([['Take-Away Serviettes','Take-Away Serviettes'],['Everyday Serviettes','Everyday Serviettes'],['House-Hold Towels','House-Hold Towels']])) %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+  
 <div class="field">
     <%= form.label :quantity %>
     <%= form.text_field :quantity %>

@@ -2,7 +2,9 @@
 
 <h1>Your Orders: <%= current_user.products.count %></h1>
 
-<table class='table table-striped table-dark'>
+
+
+<table id="myTable" class='table table-striped table-dark'>
   <thead>
     <tr>
        <th scope="col">Order Date:</th>
@@ -16,6 +18,9 @@
   </thead>
 
   <tbody>
+    <% if current_user.admin? %>
+    <div class="pull-right"><%= link_to 'New', new_product_path, :class => 'btn-primary button-xs' %></div>
+    <% end %>
     
     <% @products.each do |product| %>
       <tr>
