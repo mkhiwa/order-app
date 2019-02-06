@@ -1,8 +1,6 @@
 class ProductsController < ApplicationController
  before_action :authenticate_user!
-  http_basic_authenticate_with name: 'neyda', 
-  password: 'ricardo', 
-  except: [:show,:index,:new,:create]
+ 
  
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -36,7 +34,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.user_id = current_user.id
-    OrderMailer.order_email(@product).deliver
+   
     respond_to do |format|
       if @product.save
         format.html { redirect_to products_url, notice: 'Product was successfully created.' }
