@@ -8,7 +8,8 @@ Rails.application.routes.draw do
    
    get 'thankyou', to: 'products#index'
   root to: 'visitors#index'
-   resources :products
-  devise_for :users
-  resources :users
+   resources :products 
+   
+   devise_for :users
+   resources :users
 end

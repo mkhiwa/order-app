@@ -18,9 +18,9 @@
   </thead>
 
   <tbody>
-    <% if current_user.admin? %>
+    
     <div class="pull-right"><%= link_to 'New', new_product_path, :class => 'btn-primary button-xs' %></div>
-    <% end %>
+    
     
     <% @products.each do |product| %>
       <tr>

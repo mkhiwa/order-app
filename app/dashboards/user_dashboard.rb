@@ -10,6 +10,7 @@ class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     products: Field::HasMany,
     id: Field::Number,
+    name: Field::String,
     email: Field::String,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
@@ -22,7 +23,7 @@ class UserDashboard < Administrate::BaseDashboard
     last_sign_in_ip: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    name: Field::String,
+    
     role: Field::String.with_options(searchable: false),
   }.freeze
 
@@ -44,7 +45,7 @@ class UserDashboard < Administrate::BaseDashboard
     :products,
     :id,
     :email,
-  
+    :name,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -52,7 +53,7 @@ class UserDashboard < Administrate::BaseDashboard
     :last_sign_in_ip,
     :created_at,
     :updated_at,
-    :name,
+    
     :role,
   ].freeze
 

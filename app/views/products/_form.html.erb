@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
- 
- <div class="field">
+ <div id="productn">
+ <div id="product" class="field">
     <%= form.label :name %>
-    <%= form.select(:name, options_for_select([['Take-Away Serviettes','Take-Away Serviettes'],['Everyday Serviettes','Everyday Serviettes'],['House-Hold Towels','House-Hold Towels']])) %>
+    <%= form.select(:name, options_for_select([['Take-Away Serviettes(E155)','Take-Away Serviettes'],['Everyday Serviettes(E95)','Everyday Serviettes'],['House-Hold Towels(E16)','House-Hold Towels']]), :prompt => "Choose your product") %>
   </div>
   
 <div class="field">
     <%= form.label :quantity %>
-    <%= form.text_field :quantity %>
+    <%= form.text_field :quantity,:value => 1 %>
   </div>
   <div class="field">
     <%= form.label :status %>
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.select(:price, options_for_select([['E155','155'],['E95','95'],['E16','16']])) %>
   </div>
 
   <div class="field">
@@ -49,5 +49,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  </div>
 <% end %>
-

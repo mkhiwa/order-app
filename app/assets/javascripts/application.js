@@ -14,3 +14,18 @@
 //= require rails-ujs
 //= require bootstrap-sprockets
 //= require_tree .
+
+
+/* $(function() {
+    $('#productn').change(function() {
+
+        var price = {
+            'Everyday Serviettes': 9.99,
+            'Take-Away Serviettes': 14,
+            'House-Hold Towels': 11
+
+        };
+
+        $('input[name=amount3]').val(price[$(this).val()]);
+    });
+}); */

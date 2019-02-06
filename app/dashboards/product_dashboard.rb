@@ -43,13 +43,14 @@ class ProductDashboard < Administrate::BaseDashboard
     :code,
     :description,
     :status,
+    :quantity,
     :price,
     :total,
     :paid,
     :balance,
     :created_at,
     :updated_at,
-    :quantity,
+   
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -60,11 +61,12 @@ class ProductDashboard < Administrate::BaseDashboard
     :code,
     :description,
     :status,
+    :quantity,
     :price,
     :total,
     :paid,
     :balance,
-    :quantity,
+    
   ].freeze
 
   # Overwrite this method to customize how products are displayed
